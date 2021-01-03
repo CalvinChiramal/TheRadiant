@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+
+<body>
+    {% for event in events %}
+    <div style='color: maroon;background-color: dodgerblue;'>
+        <h1>{{event.eventName}}</h1>
+    </div>
+    <div style='color: darkslategrey;'>
+        {{event.eventDesc}}
+    </div>
+    {% endfor %}
+</body>
