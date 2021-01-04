@@ -9,3 +9,6 @@ def homeView(request):
     context = {}
     context['events'] = eventsList
     return render(request, 'home.html', context)
+
+def registerView(request):
+    return render(request, 'register.html')

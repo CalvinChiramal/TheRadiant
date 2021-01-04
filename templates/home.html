@@ -1,15 +1,19 @@
+{% load static %}
 <!DOCTYPE html>
 <head>
-
+    <link rel='stylesheet', href="{% static 'css/main.css' %}">
 </head>
 
-<body>
-    {% for event in events %}
-    <div style='color: maroon;background-color: dodgerblue;'>
-        <h1>{{event.eventName}}</h1>
+<body class="body">
+
+    <div class="container">
+        {% for event in events %}
+        <div class="title">
+            <h1>{{event.eventName}}</h1>
+        </div>
+        <div class="info">
+            {{event.eventDesc}}
+        </div>
+        {% endfor %}
     </div>
-    <div style='color: darkslategrey;'>
-        {{event.eventDesc}}
-    </div>
-    {% endfor %}
 </body>
